@@ -1,0 +1,18 @@
+def avg(query_name):
+    res = 0
+    print(query_name)
+    for x in student_marks[query_name]:
+        res = res + x
+    return res/3
+
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    x = avg(query_name)
+    print(x)
+
